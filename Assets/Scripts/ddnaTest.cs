@@ -13,4 +13,17 @@ public class ddnaTest : MonoBehaviour
 
     }
 
+    public void RecordOneSignalStatusEvent(OSSubscriptionState subscriptionState)
+    {
+        if (subscriptionState != null)
+        {
+            GameEvent e = new GameEvent("oneSignalPermissionState")
+                .AddParam("oneSignalSubscribed", subscriptionState.subscribed)
+                .AddParam("oneSignalUserID", subscriptionState.userId);                
+
+            DDNA.Instance.RecordEvent(e);
+
+        }
+    }
+
 }

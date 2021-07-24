@@ -6,6 +6,8 @@ public class oneSignalTest : MonoBehaviour
 {
     void Start()
     {
+        
+
         // Uncomment this method to enable OneSignal Debugging log output 
         // OneSignal.SetLogLevel(OneSignal.LOG_LEVEL.VERBOSE, OneSignal.LOG_LEVEL.NONE);
 
@@ -36,5 +38,9 @@ public class oneSignalTest : MonoBehaviour
     {
         // Optional callback if you need to know when the user accepts or declines notification permissions.
         Debug.Log("Notification Permission Accepted? " + accepted.ToString()) ;
+       
+
+        ddnaTest ddna = GetComponent<ddnaTest>();
+        ddna.RecordOneSignalStatusEvent(OneSignal.GetPermissionSubscriptionState().subscriptionStatus);
     }
 }
