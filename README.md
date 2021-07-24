@@ -16,4 +16,8 @@ The first step is to integrate One Signa and send a simple push notification.
 10. Received new notification 
 ![New Notification 001 Received](Images/new-notification-001-received.png)
 
-##
+
+## deltaDNA Setup
+1. Downloaded and imported deltaDNA Unity SDK v5.0.8
+2. Configured deltaDNA in Unity Editor, connecting it to [OneSignal - Notification Test project](https://www.deltadna.net/demo-account/one-signal-notification-test)
+3. Built and run on device, events confirmed in Event Browser Tool for userID ```1927ef91-92fd-4555-9095-e86916369f81```
