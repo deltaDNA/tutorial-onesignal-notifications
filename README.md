@@ -53,3 +53,17 @@ The first step is to integrate One Signa and send a simple push notification.
 ```
 11. Confirmed the event was being recorded correctly in the deltaDNA Event Browser
 ![oneSignalPermissionState](Images/oneSignalPermissionState.png)
+12. Send deltaDNA userID to OneSignal, for later use as an **external_user_id** by OneSignal SDK and APIs
+
+## OneSignal REST API
+Initiate a message on deltaDNA and deliver through OneSignal.
+
+**Usecase** : DeltaDNA data driven player selection sends WEBHOOK campaign content to OneSignal REST API which delivers message to player.
+1. Retrieve [OneSignal API Key](https://documentation.onesignal.com/docs/accounts-and-keys).
+2. Use REST API [Create Notification](https://documentation.onesignal.com/docs/accounts-and-keys) method to send a test notificaton to player to check API parameters.
+![api-notification-send](Images/rest-api-send.png)
+3. Confirm REST API message delivered successfully 
+![api-notification-received](Images/rest-api-received.png)
+4. Create a Webhook campaign action
+*I'm running into problems here, due to the more complex objects the API requires ![Test 012](Images/webhook-test12.png)
+
