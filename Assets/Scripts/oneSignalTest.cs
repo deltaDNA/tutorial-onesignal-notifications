@@ -33,14 +33,18 @@ public class oneSignalTest : MonoBehaviour
         Debug.Log("Notification Opened");
     }
 
+
     // iOS - Fires when the user anwser the notification permission prompt.
     private void OneSignalPromptForPushNotificationsReponse(bool accepted)
     {
         // Optional callback if you need to know when the user accepts or declines notification permissions.
         Debug.Log("Notification Permission Accepted? " + accepted.ToString()) ;
        
-
+        // Record a deltaDNA event to capture the player's OneSignal UserID and permissions
         ddnaTest ddna = GetComponent<ddnaTest>();
         ddna.RecordOneSignalStatusEvent(OneSignal.GetPermissionSubscriptionState().subscriptionStatus);
+
+        // Provide OneSignal with the deltaDNA userID
+        OneSignal.SetExternalUserId(DeltaDNA.DDNA.Instance.UserID);
     }
 }
