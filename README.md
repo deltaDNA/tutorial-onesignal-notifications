@@ -65,5 +65,6 @@ Initiate a message on deltaDNA and deliver through OneSignal.
 3. Confirm REST API message delivered successfully 
 ![api-notification-received](Images/rest-api-received.png)
 4. Create a Webhook campaign action
-*I'm running into problems here, due to the more complex objects the API requires ![Test 012](Images/webhook-test12.png)
+*I'm running into problems here, due to the more complex objects the API requires ![Test 012](Images/webhook-test12.png) 
+Attempted sends to OneSignal are returning with a **communicationState** = ```FAIL``` and **communicationDetails** of ```Missing dynamic field value(s) for placeholder(s) included_player_ids, contents, subtitle```	
 
